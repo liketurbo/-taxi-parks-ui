@@ -11,7 +11,22 @@
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "dev": "start-storybook -p 5555",
     "coverage": "jest --coverage",
-    "unit": "jest"
+    "unit": "jest",
+    "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
+    "lint:styles": "stylelint './packages/**/*.js'",
+    "lint": "yarn lint:js && yarn lint:styles",
+    "test": "yarn build && yarn lint && yarn coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "7.7.0",
@@ -23,15 +38,24 @@
     "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
     "babel-plugin-styled-components": "1.10.6",
+    "eslint": "^6.6.0",
+    "eslint-config-get-off-my-lawn": "^5.0.1",
+    "husky": "^3.0.9",
     "jest": "24.9.0",
     "jest-haste-map": "24.9.0",
     "jest-resolve": "24.9.0",
     "jest-styled-components": "6.3.3",
     "lerna": "3.18.3",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-test-renderer": "16.11.0",
     "styled-components": "4.4.1",
+    "stylelint": "^11.1.1",
+    "stylelint-config-get-off-my-lawn": "^2.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
     "webpack": "4.41.2"
   }
 }
