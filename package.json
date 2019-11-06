@@ -13,7 +13,7 @@
     "coverage": "jest --coverage",
     "unit": "jest",
     "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
-    "lint:styles": "stylelint './packages/**/*.js'",
+    "lint:styles": "stylelint \"packages/**/*.js\"",
     "lint": "yarn lint:js && yarn lint:styles",
     "test": "yarn build && yarn lint && yarn coverage"
   },
@@ -25,6 +25,7 @@
   "lint-staged": {
     "*.{js,json,md,yml}": [
       "prettier --write",
+      "yarn test",
       "git add"
     ]
   },
