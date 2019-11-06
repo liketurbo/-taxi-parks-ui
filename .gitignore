@@ -1,0 +1,11 @@
+# VSCode config
+/.vscode/
+
+# Yarn logs
+yarn-error.log
+
+# Node.js modules
+/node_modules/
+
+# Test cache
+/.jest-*/
