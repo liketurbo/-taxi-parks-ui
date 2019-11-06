@@ -1,2 +1,5 @@
 # Builded files
-**/lib/*.js
+**/lib/
+
+# Node.js modules
+/node_modules/

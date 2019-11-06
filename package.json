@@ -12,17 +12,14 @@
     "dev": "start-storybook -p 5555",
     "coverage": "jest --coverage",
     "unit": "jest",
-    "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
+    "lint:js": "eslint . --ext .js",
     "lint:styles": "stylelint \"packages/**/*.js\"",
     "lint": "yarn lint:js && yarn lint:styles",
     "test": "yarn build && yarn lint && yarn coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": [
-        "lint-staged",
-        "yarn test"
-      ]
+      "pre-commit": "lint-staged && yarn test"
     }
   },
   "lint-staged": {
