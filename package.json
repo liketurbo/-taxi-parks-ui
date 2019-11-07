@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "lerna bootstrap --use-workspaces",
+    "bootstrap": "lerna bootstrap --use-workspaces",
     "dev": "start-storybook -p 5555",
     "deploy": "storybook-to-ghpages -o .out",
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
@@ -16,13 +16,11 @@
     "test:coverage": "jest --coverage",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .js",
-    "lint:styles": "stylelint \"packages/**/*.js\"",
-    "clean": "rimraf ./packages/**/lib && rimraf ./packages/**/dist",
-    "check": "yarn build && yarn lint && yarn test:coverage"
+    "lint:styles": "stylelint \"packages/**/*.js\""
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn check"
+      "pre-commit": "lint-staged && yarn lint && yarn test:coverage"
     }
   },
   "lint-staged": {
@@ -58,7 +56,6 @@
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-test-renderer": "16.11.0",
-    "rimraf": "^3.0.0",
     "rollup": "^1.26.3",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-babel-runtime-external": "^2.0.0",
