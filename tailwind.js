@@ -1,5 +1,3 @@
-/* eslint sort-keys: 0 */
-
 /*
  *
  * Tailwind - The Utility-First CSS Framework

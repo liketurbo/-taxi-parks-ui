@@ -7,20 +7,22 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap --use-workspaces",
-    "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+    "start": "lerna bootstrap --use-workspaces",
     "dev": "start-storybook -p 5555",
     "deploy": "storybook-to-ghpages -o .out",
-    "coverage": "jest --coverage",
-    "unit": "jest",
+    "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+    "build:rollup": "lerna exec --parallel -- rollup -c=rollup.config.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .js",
     "lint:styles": "stylelint \"packages/**/*.js\"",
-    "lint": "yarn lint:js && yarn lint:styles",
-    "test": "yarn build && yarn lint && yarn coverage"
+    "clean": "rimraf ./packages/**/lib && rimraf ./packages/**/dist",
+    "check": "yarn build && yarn lint && yarn test:coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test"
+      "pre-commit": "lint-staged && yarn check"
     }
   },
   "lint-staged": {
@@ -56,6 +58,14 @@
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-test-renderer": "16.11.0",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.26.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-babel-runtime-external": "^2.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "styled-components": "4.4.1",
     "stylelint": "11.1.1",
     "stylelint-config-get-off-my-lawn": "2.0.0",
