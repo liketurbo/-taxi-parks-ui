@@ -20,7 +20,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn lint && yarn test:coverage"
+      "pre-commit": "lint-staged && yarn lint && yarn test:coverage",
+      "pre-push": "yarn deploy"
     }
   },
   "lint-staged": {
