@@ -12,3 +12,6 @@ yarn-error.log
 
 # Generates files
 lib/
+
+# Production
+/.out/

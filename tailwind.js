@@ -124,7 +124,7 @@ const screens = {
   xl: "1200px",
 }
 
-export const spacing = {
+const spacing = {
   px: "1px",
   "0": "0",
   "1": "0.25rem",
@@ -153,7 +153,7 @@ export const spacing = {
   "144": "36rem",
 }
 
-export default {
+module.exports = {
   /*
    * |-----------------------------------------------------------------------------
    * | Colors                                  https://tailwindcss.com/docs/colors
