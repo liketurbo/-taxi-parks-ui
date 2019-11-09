@@ -4,9 +4,14 @@
     "lib": [
       "es2015"
     ] /* Specify library files to be included in the compilation. */,
-    "outDir": "dist" /* Redirect output structure to the directory. */,
+    "jsx": "preserve" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
     "declaration": true /* Generates corresponding '.d.ts' file. */,
-    "emitDeclarationOnly": true,
-    "types": ["react"]
-  }
+    "emitDeclarationOnly": true /* Generates only declaration files. */,
+    "outDir": "dist" /* Redirect output structure to the directory. */,
+    "types": ["react"],
+
+    /* Module Resolution Options */
+    "esModuleInterop": true
+  },
+  "exclude": ["**/*.story.tsx"]
 }

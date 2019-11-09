@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 declare const tw: any
 
-interface ButtonProps {
+export interface ButtonProps {
   variant?: "danger" | "success"
 }
 
