@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "lib": [
+      "es2015"
+    ] /* Specify library files to be included in the compilation. */,
+    "outDir": "dist" /* Redirect output structure to the directory. */,
+    "declaration": true /* Generates corresponding '.d.ts' file. */,
+    "emitDeclarationOnly": true,
+    "types": ["react"]
+  }
+}
