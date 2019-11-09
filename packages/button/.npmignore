@@ -1,4 +1,5 @@
 # Source files
 *.spec.js
 *.story.js
-src/
+rollup.config.js
+tsconfig.json
