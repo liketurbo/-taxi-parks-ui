@@ -1,3 +1,2 @@
-*.spec.tsx
-*.story.tsx
-src/
+*.spec.js
+*.story.js
