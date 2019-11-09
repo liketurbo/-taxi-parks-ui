@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "Ramzan Chasygov <theliketurbo@gmail.com>",
   "license": "MIT",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
