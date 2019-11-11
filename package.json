@@ -12,7 +12,7 @@
     "dev": "start-storybook -p 5555",
     "deploy": "storybook-to-ghpages -o .out",
     "build": "yarn clean && yarn build:ts && yarn build:rollup",
-    "build:ts": "lerna exec --parallel -- tsc",
+    "build:ts": "lerna exec -- tsc",
     "build:rollup": "lerna exec --parallel -- rollup -c=rollup.config.js",
     "test": "jest",
     "test:coverage": "jest --coverage",

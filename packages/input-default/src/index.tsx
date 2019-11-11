@@ -1,18 +1,14 @@
 import React, { InputHTMLAttributes } from "react"
 import styled, { css } from "styled-components"
 
-declare const tw: any
-
-const CSSInput = css`
-  ${tw`p-2 mb-4 w-full rounded`}
-`
+import BaseInput from "@-taxi-parks-ui/input-base"
 
 const TextInput = styled.input`
-  ${CSSInput}
+  ${BaseInput}
 `
 
 const AreaInput = styled.textarea`
-  ${CSSInput}
+  ${BaseInput}
 
   height: 6em;
 `

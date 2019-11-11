@@ -1,5 +1,5 @@
 const rollupConfig = require("../../rollup.config")
 
-rollupConfig.output.name = "Input"
+rollupConfig.output.name = "InputDefault"
 
 module.exports = rollupConfig

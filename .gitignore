@@ -5,7 +5,7 @@
 yarn-error.log
 
 # Node.js modules
-/node_modules/
+node_modules/
 
 # Test cache
 /.jest-*/
