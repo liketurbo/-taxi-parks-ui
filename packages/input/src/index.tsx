@@ -1,11 +1,29 @@
-import styled from "styled-components"
+import React, { InputHTMLAttributes } from "react"
+import styled, { css } from "styled-components"
 
-export default styled.input`
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 300;
-  padding: 10px 40px 10px 10px;
-  width: 150px;
+declare const tw: any
+
+const CSSInput = css`
+  ${tw`p-2 mb-4 w-full rounded`}
 `
+
+const TextInput = styled.input`
+  ${CSSInput}
+`
+
+const AreaInput = styled.textarea`
+  ${CSSInput}
+
+  height: 6em;
+`
+
+export interface InputProps extends InputHTMLAttributes<any> {
+  type?: "area" | "text"
+}
+
+export default ({ type, ...rest }: InputProps) =>
+  type === "area" ? (
+    <AreaInput {...rest} />
+  ) : (
+    <TextInput {...{ type }} {...rest} />
+  )

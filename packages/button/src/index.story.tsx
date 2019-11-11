@@ -1,14 +1,10 @@
 import React from "react"
 
+import { storiesOf } from "@storybook/react"
+
 import Button from "./"
 
-export default {
-  component: Button,
-  title: "Design System|Button",
-}
-
-export const primary = () => <Button>{"Button"}</Button>
-
-export const danger = () => <Button variant="danger">{"Button"}</Button>
-
-export const success = () => <Button variant="success">{"Button"}</Button>
+storiesOf("Design System|Button", module)
+  .add("Primary", () => <Button>{"Button"}</Button>)
+  .add("Success", () => <Button variant="success">{"Button"}</Button>)
+  .add("Danger", () => <Button variant="danger">{"Button"}</Button>)

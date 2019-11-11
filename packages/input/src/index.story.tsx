@@ -1,8 +1,9 @@
 import React from "react"
+
 import { storiesOf } from "@storybook/react"
 
-import Input from "."
+import Input from "./"
 
-storiesOf("Input", module).add("default", () => (
-  <Input placeholder="Hello World!" />
-))
+storiesOf("Design System|Input", module)
+  .add("Default", () => <Input placeholder="Hello, World!" />)
+  .add("Textarea", () => <Input placeholder="Hello, World!" type="area" />)
