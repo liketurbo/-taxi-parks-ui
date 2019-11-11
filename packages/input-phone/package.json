@@ -1,15 +1,19 @@
 {
-  "name": "@-taxi-parks-ui/input-default",
+  "name": "@-taxi-parks-ui/input-phone",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
   "dependencies": {
-    "@-taxi-parks-ui/input-base": "1.0.0"
+    "@-taxi-parks-ui/input-base": "1.0.0",
+    "react-input-mask": "^2.0.4"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
     "styled-components": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react-input-mask": "^2.0.4"
   }
 }

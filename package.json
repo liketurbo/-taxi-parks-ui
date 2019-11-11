@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap --use-workspaces",
+    "bootstrap": "npx lerna bootstrap --use-workspaces",
     "dev": "start-storybook -p 5555",
     "deploy": "storybook-to-ghpages -o .out",
     "build": "yarn clean && yarn build:ts && yarn build:rollup",
