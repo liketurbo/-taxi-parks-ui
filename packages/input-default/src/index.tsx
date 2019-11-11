@@ -13,13 +13,15 @@ const AreaInput = styled.textarea`
   height: 6em;
 `
 
-export interface InputProps extends InputHTMLAttributes<any> {
-  type?: "area" | "text"
-}
-
-export default ({ type, ...rest }: InputProps) =>
+const InputDefault = ({ type, ...rest }: InputProps) =>
   type === "area" ? (
     <AreaInput {...rest} />
   ) : (
     <TextInput {...{ type }} {...rest} />
   )
+
+export interface InputProps extends InputHTMLAttributes<string> {
+  type?: "area" | "text"
+}
+
+export default InputDefault

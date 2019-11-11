@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-declare const tw: any
+declare const tw: (arg: TemplateStringsArray) => string
 
 export interface ButtonProps {
   variant?: "danger" | "success"
