@@ -1,10 +1,6 @@
 # Story files
 *.story.js
 
-# Test files
-*.spec.js
-__snapshots__/
-
 # Source files
 rollup.config.js
 tsconfig.json

@@ -14,8 +14,6 @@
     "build": "yarn clean && yarn build:ts && yarn build:rollup",
     "build:ts": "lerna exec -- tsc",
     "build:rollup": "lerna exec --parallel -- rollup -c=rollup.config.js",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
     "lint": "yarn lint:js && yarn lint:styles",
     "lint:js": "eslint . --ext .tsx",
     "lint:styles": "stylelint \"packages/**/*.tsx\"",
@@ -23,12 +21,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn lint && yarn test:coverage",
+      "pre-commit": "lint-staged && yarn lint",
       "pre-push": "yarn deploy"
     }
   },
   "lint-staged": {
-    "*.{js,json,md,yml}": [
+    "*.{ts,tsx,json,md,yml}": [
       "prettier --write",
       "git add"
     ]
@@ -47,7 +45,6 @@
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
     "babel-plugin-styled-components": "1.10.6",
     "babel-plugin-tailwind-components": "0.5.10",
@@ -57,16 +54,11 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "husky": "3.0.9",
-    "jest": "24.9.0",
-    "jest-haste-map": "24.9.0",
-    "jest-resolve": "24.9.0",
-    "jest-styled-components": "6.3.3",
     "lerna": "3.18.4",
     "lint-staged": "9.4.2",
     "prettier": "1.19.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "react-test-renderer": "16.11.0",
     "rimraf": "3.0.0",
     "rollup": "1.26.5",
     "rollup-plugin-babel": "4.3.3",
