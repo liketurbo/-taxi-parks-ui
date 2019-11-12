@@ -1,8 +1,9 @@
-import styled from "styled-components"
+import React, { ButtonHTMLAttributes } from "react"
+import styled, { css } from "styled-components"
 
 declare const tw: (arg: TemplateStringsArray) => string
 
-const Button = styled.button<ButtonProps>`
+const SButton = styled.button<ButtonProps>`
   ${tw`text-lg font-medium rounded py-2 px-4`}
 
   transition: background-color 0.15s ease;
@@ -17,7 +18,32 @@ const Button = styled.button<ButtonProps>`
         return tw`bg-yellow hover:bg-yellow-dark text-grey-darkest`
     }
   }};
+
+  ${props =>
+    props.disabled &&
+    css`
+      ${tw`cursor-default`}
+
+      ${props.variant === "success" &&
+        css`
+          ${tw`bg-green-dark`}
+        `}
+
+      ${props.variant === "danger" &&
+        css`
+          ${tw`bg-red-dark`}
+        `}
+
+      ${!props.variant &&
+        css`
+          ${tw`bg-yellow-dark`}
+        `}
+    `}
 `
+
+const Button = ({ ...rest }: ButtonHTMLAttributes<string> & ButtonProps) => (
+  <SButton {...rest} />
+)
 
 export interface ButtonProps {
   variant?: "danger" | "success"

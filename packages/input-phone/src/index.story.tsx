@@ -7,6 +7,7 @@ import InputPhone from "./"
 storiesOf("Design System|Input", module).add("Phone", () => (
   <>
     <InputPhone placeholder="Enter phone number" />
+    <InputPhone disabled placeholder="Enter phone number" />
     <InputPhone error="Some error" placeholder="Enter phone number" />
   </>
 ))
