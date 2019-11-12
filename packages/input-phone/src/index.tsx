@@ -2,14 +2,20 @@ import React from "react"
 import InputMask, { Props } from "react-input-mask"
 import styled from "styled-components"
 
-import BaseInput from "@-taxi-parks-ui/input-base"
+import InputBase, { InputBaseProps } from "@-taxi-parks-ui/input-base"
+import InputErrorMsg from "@-taxi-parks-ui/input-error-msg"
 
-const PhoneInput = styled(InputMask)`
-  ${BaseInput}
+const SInputPhone = styled(InputMask)`
+  ${InputBase}
 `
 
-const InputPhone = ({ ...rest }: Omit<Props, "mask" | "type">) => (
-  <PhoneInput mask="8 (999) 999-99-99" type="tel" {...rest} />
+const InputPhone = ({
+  ...rest
+}: Omit<Props, "mask" | "type"> & InputBaseProps) => (
+  <>
+    <SInputPhone mask="8 (999) 999-99-99" type="tel" {...rest} />
+    {rest.error && <InputErrorMsg>{rest.error}</InputErrorMsg>}
+  </>
 )
 
 export default InputPhone

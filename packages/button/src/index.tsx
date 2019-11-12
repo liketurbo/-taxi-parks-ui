@@ -2,11 +2,7 @@ import styled from "styled-components"
 
 declare const tw: (arg: TemplateStringsArray) => string
 
-export interface ButtonProps {
-  variant?: "danger" | "success"
-}
-
-export default styled.button<ButtonProps>`
+const Button = styled.button<ButtonProps>`
   ${tw`text-lg font-medium rounded py-2 px-4`}
 
   transition: background-color 0.15s ease;
@@ -22,3 +18,9 @@ export default styled.button<ButtonProps>`
     }
   }};
 `
+
+export interface ButtonProps {
+  variant?: "danger" | "success"
+}
+
+export default Button

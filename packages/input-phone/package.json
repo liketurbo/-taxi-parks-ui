@@ -6,6 +6,7 @@
   "module": "src/index.tsx",
   "dependencies": {
     "@-taxi-parks-ui/input-base": "1.0.0",
+    "@-taxi-parks-ui/input-error-msg": "1.0.0",
     "react-input-mask": "^2.0.4"
   },
   "peerDependencies": {

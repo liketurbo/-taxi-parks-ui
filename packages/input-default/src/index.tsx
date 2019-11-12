@@ -1,26 +1,33 @@
 import React, { InputHTMLAttributes } from "react"
 import styled from "styled-components"
 
-import BaseInput from "@-taxi-parks-ui/input-base"
+import InputBase, { InputBaseProps } from "@-taxi-parks-ui/input-base"
+import InputErrorMsg from "@-taxi-parks-ui/input-error-msg"
 
-const TextInput = styled.input`
-  ${BaseInput}
+const InputText = styled.input`
+  ${InputBase}
 `
 
-const AreaInput = styled.textarea`
-  ${BaseInput}
+const InputArea = styled.textarea`
+  ${InputBase}
 
   height: 6em;
 `
 
-const InputDefault = ({ type, ...rest }: InputProps) =>
+const InputDefault = ({ type, ...rest }: InputDefaultProps & InputBaseProps) =>
   type === "area" ? (
-    <AreaInput {...rest} />
+    <>
+      <InputArea {...rest} />
+      {rest.error && <InputErrorMsg>{rest.error}</InputErrorMsg>}
+    </>
   ) : (
-    <TextInput {...{ type }} {...rest} />
+    <>
+      <InputText {...{ type }} {...rest} />
+      {rest.error && <InputErrorMsg>{rest.error}</InputErrorMsg>}
+    </>
   )
 
-export interface InputProps extends InputHTMLAttributes<string> {
+export interface InputDefaultProps extends InputHTMLAttributes<string> {
   type?: "area" | "text"
 }
 
