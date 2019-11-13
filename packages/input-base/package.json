@@ -6,5 +6,6 @@
   "module": "src/index.tsx",
   "peerDependencies": {
     "styled-components": "^4.0.0"
-  }
+  },
+  "gitHead": "0119d1b655d12a63519d26ca85fce1770c434c72"
 }

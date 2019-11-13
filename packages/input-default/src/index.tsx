@@ -22,14 +22,14 @@ const InputDefault = ({
   switch (type) {
     case "area":
       return (
-        <InputContainer error={rest.error}>
+        <InputContainer error={Boolean(rest.error)}>
           <InputArea {...rest} />
           {rest.error && <InputErrorMsg>{rest.error}</InputErrorMsg>}
         </InputContainer>
       )
     default:
       return (
-        <InputContainer error={rest.error}>
+        <InputContainer error={Boolean(rest.error)}>
           <InputText {...rest} />
           {rest.error && <InputErrorMsg>{rest.error}</InputErrorMsg>}
         </InputContainer>

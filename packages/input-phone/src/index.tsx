@@ -13,7 +13,7 @@ const SInputPhone = styled(InputMask)`
 const InputPhone = ({
   ...rest
 }: Omit<Props, "mask" | "type"> & InputBaseProps) => (
-  <InputContainer error={rest.error}>
+  <InputContainer error={Boolean(rest.error)}>
     <SInputPhone mask="8 (999) 999-99-99" type="tel" {...rest} />
     {rest.error && <InputErrorMsg>{rest.error}</InputErrorMsg>}
   </InputContainer>
