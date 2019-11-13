@@ -18,5 +18,8 @@
   "devDependencies": {
     "@types/react-input-mask": "2.0.4"
   },
-  "gitHead": "0119d1b655d12a63519d26ca85fce1770c434c72"
+  "gitHead": "eac06784a09a19fd11e246f9daa5b315a4d10257",
+  "publishConfig": {
+    "access": "public"
+  }
 }
