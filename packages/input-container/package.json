@@ -1,0 +1,10 @@
+{
+  "name": "@-taxi-parks-ui/input-container",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "src/index.tsx",
+  "peerDependencies": {
+    "styled-components": "^4.0.0"
+  }
+}

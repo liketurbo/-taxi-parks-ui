@@ -3,12 +3,12 @@ import { css } from "styled-components"
 declare const tw: (arg: TemplateStringsArray) => string
 
 const InputBase = css<InputBaseProps>`
-  ${tw`p-2 mb-4 w-full rounded`}
+  ${tw`p-2 w-full rounded border border-transparent`}
 
   ${props =>
     props.error &&
     css`
-      ${tw`border border-red text-red`}
+      ${tw`border-red text-red`}
 
       &::placeholder {
         ${css`
