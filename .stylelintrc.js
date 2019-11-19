@@ -9,6 +9,7 @@ module.exports = {
 
     // Disabled because of conflicts with prettier
     "number-leading-zero": null,
+    "string-quotes": "double",
 
     // Disabled because of conflicts with styled-components
     "declaration-empty-line-before": null,
