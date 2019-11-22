@@ -7,6 +7,7 @@ module.exports = {
     "plugin:react/recommended",
     "get-off-my-lawn",
   ],
+  plugins: ["import"],
   globals: {
     tw: true,
   },
@@ -27,8 +28,8 @@ module.exports = {
   },
   settings: {
     "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      typescript: {
+        alwaysTryTypes: true,
       },
     },
   },

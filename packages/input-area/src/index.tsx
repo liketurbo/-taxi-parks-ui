@@ -1,21 +1,23 @@
-import React, { InputHTMLAttributes } from "react"
+import React, { TextareaHTMLAttributes } from "react"
 import styled from "styled-components"
 
 import InputBase, { InputBaseProps } from "@-taxi-parks-ui/input-base"
 import InputContainer from "@-taxi-parks-ui/input-container"
 import InputErrorMsg from "@-taxi-parks-ui/input-error-msg"
 
-const SInputDefault = styled.input`
+const SInputArea = styled.textarea`
   ${InputBase}
+
+  height: 6em;
 `
 
-const InputDefault = ({
+const InputArea = ({
   ...rest
-}: InputHTMLAttributes<HTMLInputElement> & InputBaseProps) => (
+}: TextareaHTMLAttributes<HTMLTextAreaElement> & InputBaseProps) => (
   <InputContainer error={Boolean(rest.error)}>
-    <SInputDefault {...rest} />
+    <SInputArea {...rest} />
     {rest.error && <InputErrorMsg>{rest.error}</InputErrorMsg>}
   </InputContainer>
 )
 
-export default InputDefault
+export default InputArea

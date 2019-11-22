@@ -1,15 +1,19 @@
 {
-  "name": "@-taxi-parks-ui/input-container",
-  "version": "1.0.3",
+  "name": "@-taxi-parks-ui/input-area",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
+  "dependencies": {
+    "@-taxi-parks-ui/input-base": "^1.0.4",
+    "@-taxi-parks-ui/input-container": "^1.0.3",
+    "@-taxi-parks-ui/input-error-msg": "^1.0.4"
+  },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
     "styled-components": "^4.0.0"
   },
-  "gitHead": "eac06784a09a19fd11e246f9daa5b315a4d10257",
   "publishConfig": {
     "access": "public"
   }

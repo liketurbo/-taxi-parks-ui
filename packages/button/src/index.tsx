@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from "react"
-import styled, { css } from "styled-components"
+import styled, { css, CSSObject } from "styled-components"
 
-declare const tw: (arg: TemplateStringsArray) => string
+declare const tw: (arg: TemplateStringsArray) => CSSObject
 
 const SButton = styled.button<ButtonProps>`
   ${tw`text-lg font-medium rounded py-2 px-4`}
@@ -41,7 +41,9 @@ const SButton = styled.button<ButtonProps>`
     `}
 `
 
-const Button = ({ ...rest }: ButtonHTMLAttributes<string> & ButtonProps) => (
+const Button = ({
+  ...rest
+}: ButtonHTMLAttributes<HTMLButtonElement> & ButtonProps) => (
   <SButton {...rest} />
 )
 

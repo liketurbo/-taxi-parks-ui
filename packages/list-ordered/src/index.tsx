@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled, { CSSObject } from "styled-components"
 
-declare const tw: (arg: TemplateStringsArray) => string
+declare const tw: (arg: TemplateStringsArray) => CSSObject
 
 const Lo = styled.ol`
   ${tw`ml-1`}

@@ -1,6 +1,6 @@
-import { css } from "styled-components"
+import { css, CSSObject } from "styled-components"
 
-declare const tw: (arg: TemplateStringsArray) => string
+declare const tw: (arg: TemplateStringsArray) => CSSObject
 
 const InputBase = css<InputBaseProps>`
   ${tw`p-2 w-full rounded border border-transparent`}

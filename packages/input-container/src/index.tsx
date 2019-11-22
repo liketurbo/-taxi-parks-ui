@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components"
+import styled, { css, CSSObject } from "styled-components"
 
-declare const tw: (arg: TemplateStringsArray) => string
+declare const tw: (arg: TemplateStringsArray) => CSSObject
 
 const InputContainer = styled.div<InputContainerProps>`
   ${tw`w-full mb-5`}
