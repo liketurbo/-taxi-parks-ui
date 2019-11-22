@@ -1,14 +1,14 @@
 {
   "name": "@-taxi-parks-ui/input-default",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
   "dependencies": {
-    "@-taxi-parks-ui/input-base": "^1.0.5",
-    "@-taxi-parks-ui/input-container": "^1.0.4",
-    "@-taxi-parks-ui/input-error-msg": "^1.0.5",
-    "@-taxi-parks-ui/input-star": "^1.0.1"
+    "@-taxi-parks-ui/input-base": "^1.0.6",
+    "@-taxi-parks-ui/input-container": "^1.0.5",
+    "@-taxi-parks-ui/input-error-msg": "^1.0.6",
+    "@-taxi-parks-ui/input-star": "^1.0.2"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
