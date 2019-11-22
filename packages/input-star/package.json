@@ -1,6 +1,6 @@
 {
   "name": "@-taxi-parks-ui/input-star",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
@@ -9,7 +9,7 @@
     "react-dom": "^15.0.0 || ^16.0.0",
     "styled-components": "^4.0.0"
   },
-  "gitHead": "eac06784a09a19fd11e246f9daa5b315a4d10257",
+  "gitHead": "bb7c437071a72a8760f0ff3ce6dae283cd74a94c",
   "publishConfig": {
     "access": "public"
   }
