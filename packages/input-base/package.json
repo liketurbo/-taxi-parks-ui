@@ -1,6 +1,6 @@
 {
   "name": "@-taxi-parks-ui/input-base",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
@@ -9,7 +9,7 @@
     "react-dom": "^15.0.0 || ^16.0.0",
     "styled-components": "^4.0.0"
   },
-  "gitHead": "bb7c437071a72a8760f0ff3ce6dae283cd74a94c",
+  "gitHead": "f7d462cbfca1b7adbd10050ddc306709d3bae890",
   "publishConfig": {
     "access": "public"
   }

@@ -1,6 +1,6 @@
 {
   "name": "@-taxi-parks-ui/list-item",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
@@ -11,5 +11,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "bb7c437071a72a8760f0ff3ce6dae283cd74a94c"
+  "gitHead": "f7d462cbfca1b7adbd10050ddc306709d3bae890"
 }
