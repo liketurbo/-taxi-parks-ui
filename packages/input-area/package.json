@@ -7,7 +7,8 @@
   "dependencies": {
     "@-taxi-parks-ui/input-base": "^1.0.6",
     "@-taxi-parks-ui/input-container": "^1.0.5",
-    "@-taxi-parks-ui/input-error-msg": "^1.0.6"
+    "@-taxi-parks-ui/input-error-msg": "^1.0.6",
+    "@-taxi-parks-ui/input-star": "^1.0.3"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
