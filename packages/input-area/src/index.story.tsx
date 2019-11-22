@@ -6,8 +6,11 @@ import InputArea from "./"
 
 storiesOf("Design System|Input", module).add("Textarea", () => (
   <>
-    <InputArea placeholder="Hello, World!" />
-    <InputArea disabled placeholder="Hello, World!" />
-    <InputArea error="Some error" placeholder="Hello, World!" />
+    <InputArea placeholder="Default" />
+    <InputArea placeholder="Required" required />
+    <InputArea disabled placeholder="Required" />
+    <InputArea disabled placeholder="Disabled, Required" required />
+    <InputArea error="Some error" placeholder="Error" />
+    <InputArea error="Some error" placeholder="Error, Required" required />
   </>
 ))

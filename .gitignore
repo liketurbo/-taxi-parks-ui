@@ -1,8 +1,9 @@
 # VSCode config
 /.vscode/
 
-# Yarn logs
+# Logs
 yarn-error.log
+lerna-debug.log
 
 # Node.js modules
 node_modules/
