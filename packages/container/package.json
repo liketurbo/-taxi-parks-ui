@@ -1,11 +1,11 @@
 {
   "name": "@-taxi-parks-ui/container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
   "dependencies": {
-    "@-taxi-parks-ui/theme-spacing": "1.0.0"
+    "@-taxi-parks-ui/theme-spacing": "^1.0.1"
   },
   "peerDependencies": {
     "@-taxi-parks-ui/theme-spacing": "1.0.0",
