@@ -1,6 +1,6 @@
 {
   "name": "@-taxi-parks-ui/input-area",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
@@ -8,7 +8,7 @@
     "@-taxi-parks-ui/input-base": "^1.1.1",
     "@-taxi-parks-ui/input-container": "^1.1.1",
     "@-taxi-parks-ui/input-error-msg": "^1.1.1",
-    "@-taxi-parks-ui/input-star": "^1.1.3"
+    "@-taxi-parks-ui/input-star": "^1.1.4"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
