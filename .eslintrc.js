@@ -2,9 +2,9 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   extends: [
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
+    "prettier/@typescript-eslint",
     "get-off-my-lawn",
   ],
   plugins: ["import"],
@@ -20,7 +20,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": 0,
 
     // Disable react conflicts
-    "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
+    "react/jsx-filename-extension": [0, { extensions: [".tsx"] }],
 
     // Disable sort extension conflicts
     "import/no-useless-path-segments": 0,
