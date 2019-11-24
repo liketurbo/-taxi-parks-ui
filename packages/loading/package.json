@@ -1,0 +1,19 @@
+{
+  "name": "@-taxi-parks-ui/loading",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "src/index.tsx",
+  "dependencies": {
+    "@-taxi-parks-ui/theme-colors": "1.0.1"
+  },
+  "peerDependencies": {
+    "@-taxi-parks-ui/theme-colors": "1.0.1",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0",
+    "styled-components": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
