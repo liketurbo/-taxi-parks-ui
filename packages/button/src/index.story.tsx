@@ -6,31 +6,95 @@ import { storiesOf } from "@storybook/react"
 import Button from "./"
 
 storiesOf("Design System|Button", module)
-  .add("Primary", () => (
+  .add("primary", () => (
     <>
-      <Button onClick={action("onClick")}>{"Button"}</Button>
-      <Button disabled onClick={action("onClick")}>
-        {"Button"}
-      </Button>
+      <div>
+        <Button onClick={action("onClick")} size="sm">
+          {"Button"}
+        </Button>
+        <Button disabled onClick={action("onClick")} size="sm">
+          {"Button"}
+        </Button>
+      </div>
+      <div>
+        <Button onClick={action("onClick")}>{"Button"}</Button>
+        <Button disabled onClick={action("onClick")}>
+          {"Button"}
+        </Button>
+      </div>
+      <div>
+        <Button onClick={action("onClick")} size="lg">
+          {"Button"}
+        </Button>
+        <Button disabled onClick={action("onClick")} size="lg">
+          {"Button"}
+        </Button>
+      </div>
     </>
   ))
-  .add("Success", () => (
+  .add("danger", () => (
     <>
-      <Button onClick={action("onClick")} variant="success">
-        {"Button"}
-      </Button>
-      <Button disabled onClick={action("onClick")} variant="success">
-        {"Button"}
-      </Button>
+      <div>
+        <Button onClick={action("onClick")} size="sm" variant="danger">
+          {"Button"}
+        </Button>
+        <Button disabled onClick={action("onClick")} size="sm" variant="danger">
+          {"Button"}
+        </Button>
+      </div>
+      <div>
+        <Button onClick={action("onClick")} variant="danger">
+          {"Button"}
+        </Button>
+        <Button disabled onClick={action("onClick")} variant="danger">
+          {"Button"}
+        </Button>
+      </div>
+      <div>
+        <Button onClick={action("onClick")} size="lg" variant="danger">
+          {"Button"}
+        </Button>
+        <Button disabled onClick={action("onClick")} size="lg" variant="danger">
+          {"Button"}
+        </Button>
+      </div>
     </>
   ))
-  .add("Danger", () => (
+  .add("success", () => (
     <>
-      <Button onClick={action("onClick")} variant="danger">
-        {"Button"}
-      </Button>
-      <Button disabled onClick={action("onClick")} variant="danger">
-        {"Button"}
-      </Button>
+      <div>
+        <Button onClick={action("onClick")} size="sm" variant="success">
+          {"Button"}
+        </Button>
+        <Button
+          disabled
+          onClick={action("onClick")}
+          size="sm"
+          variant="success"
+        >
+          {"Button"}
+        </Button>
+      </div>
+      <div>
+        <Button onClick={action("onClick")} variant="success">
+          {"Button"}
+        </Button>
+        <Button disabled onClick={action("onClick")} variant="success">
+          {"Button"}
+        </Button>
+      </div>
+      <div>
+        <Button onClick={action("onClick")} size="lg" variant="success">
+          {"Button"}
+        </Button>
+        <Button
+          disabled
+          onClick={action("onClick")}
+          size="lg"
+          variant="success"
+        >
+          {"Button"}
+        </Button>
+      </div>
     </>
   ))

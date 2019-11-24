@@ -10,12 +10,23 @@ const SButton = styled.button<ButtonProps>`
 
   ${({ variant }) => {
     switch (variant) {
-      case "success":
-        return tw`bg-green hover:bg-green-dark text-grey-lightest`
       case "danger":
         return tw`bg-red hover:bg-red-dark text-grey-lightest`
+      case "success":
+        return tw`bg-green hover:bg-green-dark text-grey-lightest`
       default:
         return tw`bg-yellow hover:bg-yellow-dark text-grey-darkest`
+    }
+  }};
+
+  ${({ size }) => {
+    switch (size) {
+      case "sm":
+        return tw`text-base font-normal py-1 px-3`
+      case "lg":
+        return tw`text-xl font-semibold py-3 px-5`
+      default:
+        return tw`text-lg font-medium py-2 px-4`
     }
   }};
 
@@ -24,20 +35,16 @@ const SButton = styled.button<ButtonProps>`
     css`
       ${tw`cursor-default`}
 
-      ${props.variant === "success" &&
-        css`
-          ${tw`bg-green-dark`}
-        `}
-
-      ${props.variant === "danger" &&
-        css`
-          ${tw`bg-red-dark`}
-        `}
-
-      ${!props.variant &&
-        css`
-          ${tw`bg-yellow-dark`}
-        `}
+      ${() => {
+        switch (props.variant) {
+          case "success":
+            return tw`bg-green-dark`
+          case "danger":
+            return tw`bg-red-dark`
+          default:
+            return tw`bg-yellow-dark`
+        }
+      }}
     `}
 `
 
@@ -48,7 +55,8 @@ const Button = ({
 )
 
 export interface ButtonProps {
-  variant?: "danger" | "success"
+  variant?: "primary" | "danger" | "success"
+  size?: "sm" | "md" | "lg"
 }
 
 export default Button
