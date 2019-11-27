@@ -1,8 +1,7 @@
+import { storiesOf } from "@storybook/react"
 import React from "react"
 
-import { storiesOf } from "@storybook/react"
-
-import Loading from "./"
+import Loading from "."
 
 storiesOf("Design System|Loading", module)
   .add("small", () => <Loading size="sm" />)

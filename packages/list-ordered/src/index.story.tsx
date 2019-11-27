@@ -1,9 +1,9 @@
+import { storiesOf } from "@storybook/react"
 import React from "react"
 
 import Li from "@-taxi-parks-ui/list-item"
-import { storiesOf } from "@storybook/react"
 
-import Lo from "./"
+import Lo from "."
 
 storiesOf("Design System|List", module).add("Ordered", () => (
   <Lo>

@@ -1,8 +1,7 @@
+import { storiesOf } from "@storybook/react"
 import React from "react"
 
-import { storiesOf } from "@storybook/react"
-
-import InputPhone from "./"
+import InputPhone from "."
 
 storiesOf("Design System|Input", module).add("Phone", () => (
   <>
