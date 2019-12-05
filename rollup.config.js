@@ -13,11 +13,6 @@ module.exports = {
     exports: "named",
     file: "dist/index.js",
     format: "umd",
-    globals: {
-      react: "React",
-      "react-dom": "ReactDOM",
-      "styled-components": "styled",
-    },
   },
   plugins: [
     babel({ ...babelConfig, extensions: [".tsx"] }),
