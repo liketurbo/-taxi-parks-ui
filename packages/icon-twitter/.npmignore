@@ -1,0 +1,6 @@
+# Story files
+*.story.js
+
+# Source files
+rollup.config.js
+tsconfig.json
