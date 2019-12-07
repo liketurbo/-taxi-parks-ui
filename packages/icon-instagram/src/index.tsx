@@ -11,7 +11,7 @@ const IconInstagram = styled(PIconInstagram)`
 
   &:hover {
     & path {
-      fill: url(#a);
+      fill: url(#rg);
     }
   }
 `
