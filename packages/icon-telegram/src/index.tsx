@@ -4,7 +4,7 @@ import PIconTelegram from "./social-icon_telegram.svg"
 
 const IconTelegram = styled(PIconTelegram)`
   & path {
-    fill: white;
+    fill: #fff;
 
     transition: fill 0.15s ease;
   }

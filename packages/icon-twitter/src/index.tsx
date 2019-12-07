@@ -4,7 +4,7 @@ import PIconTwitter from "./social-icon_twitter.svg"
 
 const IconTwitter = styled(PIconTwitter)`
   & path {
-    fill: white;
+    fill: #fff;
 
     transition: fill 0.15s ease;
   }

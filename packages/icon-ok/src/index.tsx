@@ -4,7 +4,7 @@ import PIconOk from "./social-icon_ok.svg"
 
 const IconOk = styled(PIconOk)`
   & path {
-    fill: white;
+    fill: #fff;
 
     transition: fill 0.15s ease;
   }

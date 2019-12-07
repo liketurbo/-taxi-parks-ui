@@ -15,7 +15,7 @@ const IconInstagramBleached = styled(PIconInstagram)`
   transition: opacity 0.15s ease;
 
   & path {
-    fill: white;
+    fill: #fff;
   }
 
   &:hover {

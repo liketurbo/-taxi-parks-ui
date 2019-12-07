@@ -4,7 +4,7 @@ import PIconFacebook from "./social-icon_facebook.svg"
 
 const IconFacebook = styled(PIconFacebook)`
   & path {
-    fill: white;
+    fill: #fff;
 
     transition: fill 0.15s ease;
   }
