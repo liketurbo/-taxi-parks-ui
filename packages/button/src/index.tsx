@@ -20,11 +20,16 @@ const SButton = styled.button<ButtonProps>`
           return tw`bg-transparent hover:bg-green text-green hover:text-grey-lightest border-green border-green`
 
         return tw`bg-green hover:bg-green-dark text-grey-lightest border-green hover:border-green-dark`
-      default:
+      case "warning":
         if (outline)
           return tw`bg-transparent hover:bg-yellow text-yellow hover:text-grey-darkest border-yellow border-yellow`
 
         return tw`bg-yellow hover:bg-yellow-dark text-grey-darkest border-yellow hover:border-yellow-dark`
+      default:
+        if (outline)
+          return tw`bg-transparent hover:bg-blue text-blue hover:text-grey-lightest border-blue border-blue`
+
+        return tw`bg-blue hover:bg-blue-dark text-grey-lightest border-blue hover:border-blue-dark`
     }
   }};
 
@@ -50,8 +55,10 @@ const SButton = styled.button<ButtonProps>`
             return tw`bg-red-dark border-red-dark text-grey-lightest hover:bg-red-dark`
           case "success":
             return tw`bg-green-dark border-green-dark text-grey-lightest hover:bg-green-dark`
-          default:
+          case "warning":
             return tw`bg-yellow-dark border-yellow-dark text-grey-darkest hover:bg-yellow-dark`
+          default:
+            return tw`bg-blue-dark border-blue-dark text-grey-lightest hover:bg-blue-dark`
         }
       }}
     `}
@@ -64,7 +71,7 @@ const Button = ({
 )
 
 export interface ButtonProps {
-  variant?: "primary" | "danger" | "success"
+  variant?: "primary" | "warning" | "danger" | "success"
   size?: "sm" | "md" | "lg"
   outline?: boolean
 }
