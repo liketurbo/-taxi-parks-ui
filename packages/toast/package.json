@@ -5,8 +5,8 @@
   "types": "dist/index.d.ts",
   "module": "src/index.tsx",
   "dependencies": {
-    "@-taxi-parks-ui/theme-spacing": "1.0.2",
-    "@-taxi-parks-ui/theme-colors": "1.0.2"
+    "@-taxi-parks-ui/theme-colors": "1.0.2",
+    "@-taxi-parks-ui/theme-spacing": "1.0.2"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
