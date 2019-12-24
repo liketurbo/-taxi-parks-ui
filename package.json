@@ -15,7 +15,7 @@
     "build:ts": "lerna exec -- tsc",
     "build:rollup": "lerna exec --parallel -- rollup -c=rollup.config.js",
     "lint": "yarn lint:scripts && yarn lint:styles",
-    "lint:scripts": "tsc --noEmit && eslint . --ext .js,.ts,.tsx --quiet --fix",
+    "lint:scripts": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx --quiet --fix",
     "lint:styles": "stylelint \"packages/**/*.tsx\"",
     "clean": "rimraf \"packages/**/dist\""
   },
@@ -26,7 +26,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{js,jsx,ts,tsx,json,md}": [
       "prettier --write",
       "eslint --fix",
       "git add"
@@ -53,8 +53,6 @@
     "eslint": "6.7.0",
     "eslint-config-get-off-my-lawn": "5.0.1",
     "eslint-config-prettier": "6.7.0",
-    "eslint-import-resolver-typescript": "^2.0.0",
-    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-simple-import-sort": "^5.0.0",

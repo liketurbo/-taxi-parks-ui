@@ -7,7 +7,7 @@ module.exports = {
     "prettier/@typescript-eslint",
     "get-off-my-lawn",
   ],
-  plugins: ["import", "simple-import-sort"],
+  plugins: ["simple-import-sort"],
   globals: {
     tw: true,
   },
@@ -29,8 +29,8 @@ module.exports = {
   },
   settings: {
     "import/resolver": {
-      typescript: {
-        alwaysTryTypes: true,
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
       },
     },
   },
