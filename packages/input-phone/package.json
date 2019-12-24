@@ -17,7 +17,7 @@
     "styled-components": "^4.0.0"
   },
   "devDependencies": {
-    "@types/react-input-mask": "2.0.4"
+    "@types/react-input-mask": "2.0.5"
   },
   "gitHead": "eac06784a09a19fd11e246f9daa5b315a4d10257",
   "publishConfig": {
